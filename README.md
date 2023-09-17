@@ -1,2 +1,6 @@
 # AL-9618-P4-Solutions
-Sahil's solutions for A Level Computer Science 9618 Paper 4.
+HEre are my solutions for A Level Computer Science 9618 Paper 4.
+
+Cambridge International does a shockingly bad job of producing their markschemes, so I thought I could help.
+
+If you have a doubt, feel free to start a new issue!
