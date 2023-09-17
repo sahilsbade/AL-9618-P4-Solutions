@@ -7,7 +7,7 @@ class Employee:
         self.__EmployeeNumber = CEmpNum
         self.__JobTitle = CJob
         self.__PayYear2022 = []  # array 52 elements single
-        for i in range(0, 52):
+        for x in range(0, 52):
             self.__PayYear2022.append(0.00)
 
     def GetEmployeeNumber(self):
@@ -18,8 +18,8 @@ class Employee:
 
     def GetTotalPay(self):
         TotalPay = 0
-        for X in range(0, 52):
-            TotalPay += self.__PayYear2022[X]
+        for x in range(0, 52):
+            TotalPay += self.__PayYear2022[x]
         return TotalPay
 
 
@@ -40,11 +40,11 @@ def EnterHours():
         File1 = open(Filename1, 'r')
         EmpID = ""
 
-        for X in range(0, 8):
+        for x in range(0, 8):
             EmpID = File1.readline()
-            for Y in range(0, 8):
-                if EmployeeArray[Y].GetEmployeeNumber() == EmpID:
-                    EmployeeArray[Y].SetPay(1, float(File1.readline()))
+            for y in range(0, 8):
+                if EmployeeArray[y].GetEmployeeNumber() == EmpID:
+                    EmployeeArray[y].SetPay(1, float(File1.readline()))
 
         File1.close()
 
