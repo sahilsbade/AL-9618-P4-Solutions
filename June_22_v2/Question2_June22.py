@@ -10,13 +10,13 @@ def printArray(arr):
 
 def BinarySearch(SearchArray, Lower, Upper, SearchValue):
     if Upper >= Lower:
-        Mid = (Lower + (Upper - 1)) // 2
+        Mid = (Lower + Upper) // 2
         if SearchArray[0][Mid] == SearchValue:
             return Mid
         elif SearchArray[0][Mid] > SearchValue:
-            return BinarySearch(SearchArray, Lower, Mid - 1, SearchValue)
+            return BinarySearch(SearchArray, Lower, Mid-1, SearchValue)
         else:
-            return BinarySearch(SearchArray, Mid + 1, Upper, SearchValue)
+            return BinarySearch(SearchArray, Mid+1, Upper, SearchValue)
 
     return -1
 
@@ -40,4 +40,5 @@ for X in range(0, ArrayLength):
 print("After")
 printArray(ArrayData)
 
-print(BinarySearch(ArrayData, 0, 9, 99))
+print(BinarySearch(ArrayData, 0, 9, int(input())))
+print(BinarySearch(ArrayData, 0, 9, int(input())))
