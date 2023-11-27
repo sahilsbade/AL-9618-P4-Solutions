@@ -20,13 +20,13 @@ class HiddenBox:
 		return self.__BoxName
 
 
-def NewBox(TheBoxes):
+def NewBox(Box1):
 	global NumBoxes
 	BoxName = input("Enter the name of the box: ")
 	Creator = input("Enter the creator of the box: ")
 	DateHidden = input("Enter the date when the box was hidden: ")
 	GameLocation = input("Enter the location of the box: ")
-	TheBoxes[NumBoxes] = HiddenBox(BoxName, Creator, DateHidden, GameLocation)
+	Box1[NumBoxes] = HiddenBox(BoxName, Creator, DateHidden, GameLocation)
 	NumBoxes += 1
 
 
