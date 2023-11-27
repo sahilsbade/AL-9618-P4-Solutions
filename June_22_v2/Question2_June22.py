@@ -40,5 +40,6 @@ for X in range(0, ArrayLength):
 print("After")
 printArray(ArrayData)
 
-print(BinarySearch(ArrayData, 0, 9, int(input())))
-print(BinarySearch(ArrayData, 0, 9, int(input())))
+for x in range(0, 2):
+    Val = int(input("Enter value to be searched: "))
+    print(BinarySearch(ArrayData, 0, 9, Val))

@@ -39,8 +39,8 @@ class Vehicle:
         self.__HorizontalPosition = self.__HorizontalPosition + self.__CurrentSpeed
 
     def getCurrentPosition(self):
-        print("Current position: {}".format(self.__HorizontalPosition))
-        print("Current speed: {}".format(self.__CurrentSpeed))
+        print(f"Current position: {self.__HorizontalPosition}")
+        print(f"Current speed: {self.__CurrentSpeed}")
 
 class Helicopter (Vehicle):
     # VerticalPosition integer
@@ -67,11 +67,12 @@ class Helicopter (Vehicle):
         Vehicle.SetHorizontalPosition(self, Vehicle.getCurrentSpeed(self) + Vehicle.getHorizontalPosition(self))
 
     def getCurrentPosition(self):
-        print(f"Current position: {Vehicle.getHorizontalPosition(self)}")
+        print(f"Current horizontal position: {Vehicle.getHorizontalPosition(self)}")
+        print(f"Current vertical position: {self.__VerticalPosition}")
         print(f"Current speed: {Vehicle.getCurrentSpeed(self)}")
 
 
-# main program
+"""main"""
 Car = Vehicle("Tiger", 100, 20)
 
 Heli = Helicopter("Lion", 350, 40, 3, 100)
@@ -83,4 +84,3 @@ print("")
 Heli.IncreaseSpeed()
 Heli.IncreaseSpeed()
 Heli.getCurrentPosition()
-

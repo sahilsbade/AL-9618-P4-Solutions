@@ -34,4 +34,4 @@ DataToFind = int(input("\nEnter a number between 0 and 100 (inclusive): "))
 if DataToFind < 0 or DataToFind > 100:
     DataToFind = int(input("Enter a number between 0 and 100 (inclusive)"))
 
-print("The number {0} is found {1} times.".format(DataToFind, LinearSearch(DataArray, DataToFind)))
+print(f"The number {DataToFind} is found {LinearSearch(DataArray, DataToFind)} times.")

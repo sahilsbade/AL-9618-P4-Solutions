@@ -13,7 +13,7 @@ class Balloon:
 	def ChangeHealth(self, change_in_health):
 		self.__Health = self.__Health + change_in_health
 
-	def CheckHealth(self): # TRUE = balloon dead and FALSE = balloon alive
+	def CheckHealth(self):  # TRUE = balloon dead and FALSE = balloon alive
 		if self.__Health <= 0:
 			return True
 		else:

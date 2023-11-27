@@ -20,8 +20,8 @@ def ChooseCard():
 
 	while Continue:
 		CardSelected = int(input("Enter a card number from 1 to 30: ")) - 1
-		if 0 > CardSelected > 29:
-			print("Number *must* be between 1 and 30.")
+		if CardSelected < 0 or CardSelected > 29:
+			print("Number must be between 1 and 30.")
 		elif NumbersChosen[CardSelected]:
 			print("Card selected already taken.")
 		else:
@@ -54,5 +54,4 @@ for x in range(0, 4):
 	Player1.append(CardArray[ReturnNumber])
 
 for x in range(0, 4):
-	print(Player1[x].GetNumber())
-	print(Player1[x].GetColor())
+	print(f"{Player1[x].GetNumber()} {Player1[x].GetColor()}")

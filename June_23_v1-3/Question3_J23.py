@@ -37,13 +37,13 @@ def ReadData():
         AnimalFile = open("AnimalData.txt", 'r')
 
         for Line in AnimalFile:
-            PushAnimal(Line)
+            PushAnimal(Line.strip())
 
         AnimalFile.close()
 
         ColourFile = open("ColourData.txt", 'r')
         for Line in ColourFile:
-            PushColour(Line)
+            PushColour(Line.strip())
 
         ColourFile.close()
 
@@ -93,7 +93,7 @@ def OutputItem():
         PushColour(AnimalReturned)
 
     else:
-        print(ColourReturned, AnimalReturned)
+        print(f"{ColourReturned} {AnimalReturned}")
 
 
 # main program

@@ -8,8 +8,8 @@ def linearSearch(data):
 
 
 def bubbleSort():
-	for x in range(0, 9):
-		for y in range(0, 8):
+	for x in range(0, 10):
+		for y in range(0, 9):
 			if arrayData[y] > arrayData[y + 1]:
 				temp = arrayData[y]
 				arrayData[y] = arrayData[y + 1]

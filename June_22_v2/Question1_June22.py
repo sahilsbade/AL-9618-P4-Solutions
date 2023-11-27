@@ -39,8 +39,6 @@ def Pop():
         return ReturnData
 
 
-
-
 # StackPointer = 0  # integer
 # StackData = [0 for i in range(0,10)]  # integer
 

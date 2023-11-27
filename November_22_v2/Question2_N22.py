@@ -64,5 +64,4 @@ while not IsValid:
         cArr[pos].ChangePosition(1, 0)
         IsValid = True
 
-print(cName, " has changed coordinate to X = ",
-      str(cArr[pos].GetX()), " Y = ", str(cArr[pos].GetY()))
+print(f"{cName} has changed coordinates to X =  {str(cArr[pos].GetX())}  Y =  {Str(cArr[pos].GetY())}")

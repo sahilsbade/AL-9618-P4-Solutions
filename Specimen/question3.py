@@ -20,7 +20,11 @@ def Remove():
 	if EndPointer - StartPointer < 2:
 		return "No Items"
 	else:
-		return QueueData[StartPointer] + " " + QueueData[StartPointer + 1]
+		Val1 = QueueData[StartPointer]
+		StartPointer += 1
+		Val2 = QueueData[StartPointer]
+		StartPointer += 1
+		return Val1 + " " + Val2
 
 
 def ReadFile():
@@ -62,8 +66,8 @@ EndPointer = 0
 Value = ReadFile()
 
 if Value == -1:
-	print("File not found")
+	print("File not found.")
 elif Value == 2:
-	print("Insufficient space in queue")
+	print("Insufficient space in queue.")
 else:
-	print("Enqueue from file successful")
+	print("Enqueue from file successful.")

@@ -1,5 +1,5 @@
 class Employee:
-    # self.__HourlyPay single
+    # self.__HourlyPay real
     # self.__EmployeeNumber string
     # self.__JobTitle string
     def __init__(self, CEmpNum, CPay, CJob):
@@ -7,7 +7,7 @@ class Employee:
         self.__EmployeeNumber = CEmpNum
         self.__JobTitle = CJob
         self.__PayYear2022 = []  # array 52 elements single
-        for x in range(0, 52):
+        for i in range(0, 52):
             self.__PayYear2022.append(0.00)
 
     def GetEmployeeNumber(self):
@@ -18,13 +18,13 @@ class Employee:
 
     def GetTotalPay(self):
         TotalPay = 0
-        for x in range(0, 52):
-            TotalPay += self.__PayYear2022[x]
+        for i in range(0, 52):
+            TotalPay += self.__PayYear2022[i]
         return TotalPay
 
 
 class Manager(Employee):
-    # BonusValue single
+    # BonusValue real
     def __init__(self, CEmpNum, CPay, CJob, CBonus):
         super().__init__(CEmpNum, CPay, CJob)
         self.__BonusValue = CBonus
@@ -40,11 +40,11 @@ def EnterHours():
         File1 = open(Filename1, 'r')
         EmpID = ""
 
-        for x in range(0, 8):
-            EmpID = File1.readline()
-            for y in range(0, 8):
-                if EmployeeArray[y].GetEmployeeNumber() == EmpID:
-                    EmployeeArray[y].SetPay(1, float(File1.readline()))
+        for j in range(0, 8):
+            EmpID = File1.readline().strip()
+            for k in range(0, 8):
+                if EmployeeArray[k].GetEmployeeNumber() == EmpID:
+                    EmployeeArray[k].SetPay(1, float(File1.readline()))
 
         File1.close()
 
@@ -65,7 +65,7 @@ try:
     File = open(Filename, 'r')
     for x in range(0, 8):
         Pay = float(File.readline())
-        ID = File.readline()
+        ID = File.readline().strip()
         Temp = File.readline()
         try:
             Bonus = float(Temp)

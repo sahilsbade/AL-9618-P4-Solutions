@@ -36,9 +36,9 @@ def readData():
 
         while read_data != "":
             question = read_data
-            answer = int((File.readline()).strip())
+            ans = int((File.readline()).strip())
             points = int((File.readline()).strip())
-            arrayTreasure.append(TreasureChest(question, answer, points))
+            arrayTreasure.append(TreasureChest(question, ans, points))
             read_data = (File.readline()).strip()
 
         File.close()

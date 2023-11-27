@@ -23,12 +23,10 @@ def Enqueue(RecordToAdd):
 
     if NumberOfItems == 5:
         return -1
-
     else:
         CircularQueue[Tail] = RecordToAdd
         if Tail == 4:
             Tail = 0
-
         else:
             Tail += 1
 
@@ -47,7 +45,6 @@ def Dequeue():
         NumberOfItems -= 1
         if Head == 4:
             Head = 0
-
         else:
             Head += 1
 
@@ -60,7 +57,6 @@ def EnterRecord():
 
     if Enqueue(Record) == -1:
         print("Full")
-
     else:
         print("Stored")
 
@@ -72,7 +68,6 @@ ReturnValue = Dequeue()
 
 if ReturnValue == -1:
     print("Queue Empty")
-
 else:
     print(ReturnValue.SaleID, " ", ReturnValue.Quantity)
 

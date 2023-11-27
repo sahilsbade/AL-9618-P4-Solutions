@@ -1,40 +1,36 @@
-ArrayNodes = []
-for x in range(0, 20):
-    ArrayNodes.append([-1, -1, -1])
 
-ArrayNodes = [[1, 20, 5], [2, 15, -1], [-1, 3, 3], [-1, 9, 4], [-1, 10, -1], [-1, 58, -1]]
-FreeNodes = 6
-RootPointer = 0
-
-
-def SearchValue(Root, ValueToFind):
-    global ArrayNodes
-    if Root == -1:
-        return -1
-
-    elif ArrayNodes[Root][1] == ValueToFind:
-        return Root
-
-    elif ArrayNodes[Root][1] == -1:
-        return -1
-
-    if ArrayNodes[Root][1] > ValueToFind:
-        return SearchValue(ArrayNodes[Root][0], ValueToFind)
-    if ArrayNodes[Root][1] < ValueToFind:
-        return SearchValue(ArrayNodes[Root][2], ValueToFind)
-
-def PostOrder(RootNode):
-    if RootNode[0] != -1:
-        PostOrder(ArrayNodes[RootNode[0]])
-    if RootNode[2] != -1:
-        PostOrder(ArrayNodes[RootNode[2]])
-
-    print(str(RootNode[1]))
+def Enqueue(Data):
+    global Queue
+    global TailPointer
+    global HeadPointer
+    if TailPointer < 100:
+        if HeadPointer == -1:
+            HeadPointer = 0
+        Queue[TailPointer] = Data
+        TailPointer += 1
+        return True
+    return False
 
 
-ReturnValue = SearchValue(RootPointer, 15)
-if ReturnValue == -1:
-    print("Not found")
-else:
-    print("Found at: " + str(ReturnValue))
-PostOrder(ArrayNodes[RootPointer])
+def RecursiveOutput(Start):
+    global Queue
+    if Start == 0:
+        return Queue[Start]
+    else:
+        return Queue[Start] + RecursiveOutput(Start - 1)
+
+
+""""main"""
+Queue = [-1 for x in range(0, 100)]
+HeadPointer = -1
+TailPointer = 0
+
+Success = False
+for count in range(1, 121):
+    Success = Enqueue(count)
+    if not Success:
+        print("Unsuccessful Enqueue")
+    else:
+        print("Success")
+
+print(RecursiveOutput(TailPointer - 1))
