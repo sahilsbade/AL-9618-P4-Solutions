@@ -39,9 +39,9 @@ def InsertionSort():
     for x in range(1, NumberOfJobs):
         Current1 = Jobs[x][0]
         Current2 = Jobs[x][1]
-        while x > 0 and Jobs[x-1][1] > Current2:
-            Jobs[x][0] = Jobs[x-1][0]
-            Jobs[x][1] = Jobs[x-1][1]
+        while x > 0 and Jobs[x - 1][1] > Current2:
+            Jobs[x][0] = Jobs[x - 1][0]
+            Jobs[x][1] = Jobs[x - 1][1]
             x = x - 1
 
         Jobs[x][0] = Current1
@@ -52,8 +52,9 @@ def PrintArray():
     global NumberOfJobs
     global Jobs
 
-    for x in range (0, NumberOfJobs):
+    for x in range(0, NumberOfJobs):
         print(f"{Jobs[x][0]} priority {Jobs[x][1]}")
+
 
 InsertionSort()
 PrintArray()
