@@ -39,13 +39,14 @@ def InsertionSort():
     for x in range(1, NumberOfJobs):
         Current1 = Jobs[x][0]
         Current2 = Jobs[x][1]
-        while x > 0 and Jobs[x - 1][1] > Current2:
-            Jobs[x][0] = Jobs[x - 1][0]
-            Jobs[x][1] = Jobs[x - 1][1]
-            x = x - 1
+        counter = x
+        while counter > 0 and Jobs[counter - 1][1] > Current2:
+            Jobs[counter][0] = Jobs[counter - 1][0]
+            Jobs[counter][1] = Jobs[counter - 1][1]
+            counter = counter - 1
 
-        Jobs[x][0] = Current1
-        Jobs[x][1] = Current2
+        Jobs[counter][0] = Current1
+        Jobs[counter][1] = Current2
 
 
 def PrintArray():
