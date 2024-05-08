@@ -21,6 +21,7 @@ def addNode(arr, startP, emptyL):
 		return False
 
 	else:
+		newEmptyL = arr[emptyL].nextNode
 		newNode = Node(int(add_data), -1)
 		arr[emptyL] = newNode
 
@@ -31,9 +32,9 @@ def addNode(arr, startP, emptyL):
 			currentPointer = arr[currentPointer].nextNode
 
 		arr[previousPointer].nextNode = emptyL
-		emptyL = arr[emptyL].nextNode
+		emptyL = newEmptyL
 
-		return True
+		return True, emptyL
 
 
 '''main'''
@@ -44,7 +45,7 @@ startPointer = 0
 emptyList = 5
 
 outputNodes(linkedList, startPointer)
-returnValue = addNode(linkedList, startPointer, emptyList)
+returnValue, emptyList = addNode(linkedList, startPointer, emptyList)
 
 if returnValue:
 	print("Item successfully added")

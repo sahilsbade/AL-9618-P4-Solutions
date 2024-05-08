@@ -14,8 +14,7 @@ def RecursiveVowels(Value: str) -> int:
         return 0
     else:
         FirstCharacter = Value[0]
-        if (FirstCharacter == 'a' or FirstCharacter == 'e' or FirstCharacter == 'i'
-                or FirstCharacter == 'o' or FirstCharacter == 'u'):
+        if FirstCharacter in ['a', 'e', 'i', 'o', 'u']:
             return 1 + RecursiveVowels(Value[1:len(Value)])
         else:
             return RecursiveVowels(Value[1:len(Value)])

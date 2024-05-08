@@ -24,7 +24,7 @@ class Picture:
 PictureArray = [Picture("", 0, 0, "") for i in range(0, 100)]
 
 
-def ReadData(PictureArray):
+def ReadData(arr):
     Filename = "Pictures.txt"
     count = 0
 
@@ -38,7 +38,7 @@ def ReadData(PictureArray):
             RHeight = int(File.readline().strip())
             RFrameColour = File.readline().lower().strip()
 
-            PictureArray[count] = Picture(RDescription, RWidth, RHeight, RFrameColour)
+            arr[count] = Picture(RDescription, RWidth, RHeight, RFrameColour)
 
             RDescription = File.readline().lower()
 
@@ -59,9 +59,9 @@ ReadData(PictureArray)
 GFrameColour = input("Enter the frame colour: ").lower().strip()
 GWidth = int(input("Enter the maximum width: ").strip())
 GHeight = int(input("Enter the maximum height: ").strip())
+print("\n")
 
 for i in range(NumberOfPictures):
-    if PictureArray[i].getColour() == GFrameColour and PictureArray[i].getWidth() <= GWidth and PictureArray[i].getHeight() <= GHeight:
-        print(PictureArray[i].getDescription(), end=' ')
-        print(PictureArray[i].getWidth(), end=' ')
-        print(PictureArray[i].getHeight())
+    if (PictureArray[i].getColour() == GFrameColour and PictureArray[i].getWidth() <= GWidth and
+            PictureArray[i].getHeight() <= GHeight):
+        print(f"{PictureArray[i].getDescription()} {PictureArray[i].getWidth()} {PictureArray[i].getHeight()}")

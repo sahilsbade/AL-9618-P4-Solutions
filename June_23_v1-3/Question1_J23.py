@@ -13,18 +13,18 @@ except IOError:
     print("No file found")
 
 
-def PrintArray(DataArray):
-    for i in range(0, len(DataArray)):
-        print(DataArray[i], end=" ")
+def PrintArray(arr):
+    for i in range(0, len(arr)):
+        print(arr[i], end= " ")
 
 
 PrintArray(DataArray)
 
 
-def LinearSearch(DataArray, DataToFind):
+def LinearSearch(arr, data_to_found):
     Count = 0
-    for x in range(0, len(DataArray)):
-        if DataArray[x] == DataToFind:
+    for x in range(0, len(arr)):
+        if arr[x] == data_to_found:
             Count += 1
 
     return Count

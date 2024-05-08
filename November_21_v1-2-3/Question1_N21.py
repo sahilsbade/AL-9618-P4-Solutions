@@ -11,11 +11,13 @@ def Unknown(X, Y):
 
 print("10, 15")
 print(str(Unknown(10, 15)))
+print("")
 print("10, 10")
 print(str(Unknown(10, 10)))
+print("")
 print("15, 10")
 print(str(Unknown(15, 10)))
-
+print("")
 
 def IterativeUnknown(X, Y):
 	Total = 1
@@ -32,7 +34,10 @@ def IterativeUnknown(X, Y):
 
 print("10 and 15")
 print(str(IterativeUnknown(10, 15)))
+print("")
 print("10 and 10")
 print(str(IterativeUnknown(10, 10)))
+print("")
 print("15 and 10")
 print(str(IterativeUnknown(15, 10)))
+print("")

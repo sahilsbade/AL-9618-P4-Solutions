@@ -1,4 +1,3 @@
-
 def Enqueue(Data):
     global Queue
     global TailPointer
@@ -26,7 +25,7 @@ HeadPointer = -1
 TailPointer = 0
 
 Success = False
-for count in range(1, 121):
+for count in range(1, 21):
     Success = Enqueue(count)
     if not Success:
         print("Unsuccessful Enqueue")

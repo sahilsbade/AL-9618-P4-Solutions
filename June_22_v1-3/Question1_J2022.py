@@ -12,7 +12,8 @@ def ReadHighScores():
 
 def OutputHighScores():
 	for x in range(0, 11):
-		print(f"{FileData[x][0]} {FileData[x][1]}")
+		if FileData[x][1] != 0:
+			print(f"{FileData[x][0]} {FileData[x][1]}")
 
 
 def Arrange(PlayerName, points):
@@ -46,7 +47,7 @@ def WriteTopTen():
 
 """main"""
 
-FileData = [["" for x in range(0, 2)] for y in range(0, 11)]
+FileData = [["", 0] for y in range(0, 11)]
 
 ReadHighScores()
 OutputHighScores()

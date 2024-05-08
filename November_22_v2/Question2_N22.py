@@ -22,6 +22,8 @@ class Character:
         self.__YCoordinate = self.__YCoordinate + YChange
 
 
+"""main"""
+
 cArr = [] * 10
 
 try:
@@ -64,4 +66,4 @@ while not IsValid:
         cArr[pos].ChangePosition(1, 0)
         IsValid = True
 
-print(f"{cName} has changed coordinates to X =  {str(cArr[pos].GetX())}  Y =  {Str(cArr[pos].GetY())}")
+print(f"{cName} has changed coordinates to X =  {str(cArr[pos].GetX())}  Y =  {str(cArr[pos].GetY())}")

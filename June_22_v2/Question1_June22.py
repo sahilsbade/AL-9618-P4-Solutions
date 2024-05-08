@@ -1,15 +1,15 @@
-global StackPointer
-global StackData
+# global StackPointer
+# global StackData
 
 StackPointer = 0  # integer
-StackData = [0 for i in range(0,10)]  # integer
+StackData = [0 for i in range(0, 10)]  # integer
 
 
 def output_stack():
     global StackPointer
     global StackData
 
-    for i in range(0,10):
+    for i in range(0, 10):
         print(StackData)
 
 
@@ -19,7 +19,7 @@ def Push(data):
 
     if StackPointer == 10:
         return False
-    
+
     else:
         StackData[StackPointer] = data
         StackPointer += 1
@@ -48,7 +48,7 @@ for x in range(0, 11):
 
     if Push(num):
         print("Stored")
-    
+
     else:
         print("Stack full")
 

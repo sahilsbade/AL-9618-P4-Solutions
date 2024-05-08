@@ -12,7 +12,7 @@ global NumberOfItems
 Head = 0
 Tail = 0
 NumberOfItems = 0
-for x in range(0,5):
+for x in range(0, 5):
     CircularQueue.append(SaleData("", -1))
 
 
@@ -52,8 +52,8 @@ def Dequeue():
 
 def EnterRecord():
     ID = input("Enter ID: ")
-    EQuantity = int(input("Enter Quantity: "))
-    Record = SaleData(ID, EQuantity)
+    Quantity = int(input("Enter Quantity: "))
+    Record = SaleData(ID, Quantity)
 
     if Enqueue(Record) == -1:
         print("Full")

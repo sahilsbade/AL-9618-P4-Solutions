@@ -33,7 +33,6 @@ def BubbleSort():
 	top = 100
 	while swaps or top > 0:
 		swaps = False
-
 		for x in range(0, top - 1):
 			if DataArray[x] > DataArray[x + 1]:
 				Temp = DataArray[x]

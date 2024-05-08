@@ -46,10 +46,8 @@ class MagicCharacter(Character):
 """main"""
 FirstCharacter = Character("Royal", datetime.date(2019, 1, 1), 70, 30)
 FirstCharacter.Learn()
-print("{0} is {1} years old and has an intelligence value of {2}."
-      .format(FirstCharacter.GetName(), FirstCharacter.ReturnAge(), FirstCharacter.GetIntelligence()))
+print(f"{FirstCharacter.GetName()} is {FirstCharacter.ReturnAge()} years old and has an intelligence value of {FirstCharacter.GetIntelligence()}.")
 
 FirstMagic = MagicCharacter("Light", datetime.date(2018, 3, 3), 75, 22, "fire")
 FirstMagic.Learn()
-print("{0} is {1} years old and has an intelligence value of {2}."
-      .format(FirstMagic.GetName(), FirstMagic.ReturnAge(), FirstMagic.GetIntelligence()))
+print(f"{FirstMagic.GetName()} is {FirstMagic.ReturnAge()} years old and has an intelligence value of {FirstMagic.GetIntelligence()}.")

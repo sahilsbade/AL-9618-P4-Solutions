@@ -14,9 +14,9 @@ class Card:
 
 
 class Hand:
-	# self.__Cards[10] : Card
-	# self.__FirstCard : INTEGER
-	# self.__NumberCards : INTEGER
+	# Cards[10]: Card
+	# FirstCard: INTEGER
+	# NumberCards: INTEGER
 	def __init__(self, Card1, Card2, Card3, Card4, Card5):
 		self.__Cards = []
 		self.__Cards.append(Card1)

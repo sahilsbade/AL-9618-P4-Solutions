@@ -44,7 +44,7 @@ def EnterHours():
             EmpID = File1.readline().strip()
             for k in range(0, 8):
                 if EmployeeArray[k].GetEmployeeNumber() == EmpID:
-                    EmployeeArray[k].SetPay(1, float(File1.readline()))
+                    EmployeeArray[k].SetPay(1, float(File1.readline().strip()))
 
         File1.close()
 

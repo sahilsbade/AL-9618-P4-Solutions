@@ -15,6 +15,7 @@ def SearchValue(Root, ValueToFind):
 
 
 def PostOrderTraversal(RootNode):
+	global ArrayNodes
 	if RootNode[0] != -1:
 		PostOrderTraversal(ArrayNodes[RootNode[0]])
 

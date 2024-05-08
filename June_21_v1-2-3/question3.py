@@ -23,6 +23,8 @@ class TreasureChest:
             return self.__points // 2
         elif UAttempts == 3 or UAttempts == 4:
             return self.__points // 4
+        else:
+            return 0
 
 
 arrayTreasure = []  # 5 of type TreasureChest
